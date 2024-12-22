@@ -1,0 +1,140 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #87CEEB, #B0E0E6);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #444;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+    margin-right: 20px;
+    color: #333;
+}
+
+nav img {
+    width: 80px; /* Set the desired width */
+    height: 80px; /* Set the desired height */
+    object-fit: contain; /* Ensure the image scales properly */
+}
+
+/* Form Styling */
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error Message Styling */
+p.error {
+    color: red;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Weather Info Styling */
+.weather-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.weather-info img {
+    margin-top: 10px;
+}
+
+/* Date Styling */
+.date {
+    font-size: 1.1rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .weather-info {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+    }
+}

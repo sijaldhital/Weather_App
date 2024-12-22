@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <nav>
+        <h1>Weather App</h1>
+        <div class="nav-logo">
+            <img src="{% static 'images/weather_img.png' %}" alt="App Logo">
+        </div>
+    </nav>    
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Enter city name" value="{{ city }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+        <h3>{{ city|capfirst }}</h3>
+        <p>{{ country_code }}</p>
+        <p>{{ coordinates }}</p>
+        <h2>{{ temp|floatformat:1 }}°C</h2>
+        </h3>{{ description }}</h3>
+        
+        
+        <p>
+            <img src="http://openweathermap.org/img/w/{{ icon }}.png" width="100px" alt="Weather icon">
+        </p>
+        <p>{{ day }}</p>
+    {% endif %}
+</body>
+</html>
